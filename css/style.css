@@ -9,6 +9,143 @@ body{
 .container{
   margin:0 auto;
   width: 1170px;
-  height:100vh;
   border:1px solid black;
+}
+/* NAV */
+#nav{
+  display: flex;
+  width: 100%;
+  height:100px;
+  background-color: lightblue;
+}
+.nav-left{
+  justify-content:flex-start;
+  width: 20%;
+  height:100px;
+  border:2px solid blue;
+}
+.nav-right{
+  justify-content:flex-end;
+  width: 80%;
+  height:100px;
+  border:2px solid blue;
+}
+/* JUMBOTRON */
+#jumbotron{
+  display: flex;
+  width: 100%;
+  height: 500px;
+  background-color: lightyellow;
+}
+.caring{
+  justify-content:flex-start;
+  width: 70%;
+  height: 200px;
+  border:1px solid lightblue;
+}
+/* MAIN/welcome */
+.container-welcome{
+  display: flex;
+  flex-wrap: wrap;
+  margin:0 auto;
+  width: 1170px;
+  border:1px solid black;
+}
+.welcome{
+  width: 100%;
+  height:150px;
+  border:1px solid red;
+}
+.same, .world, .expert, .complementary{
+  width:calc(100% / 4);
+  height: 150px;
+  border:1px solid red;
+}
+/* MAIN/meet-doctors */
+.meet-doctors{
+  width: 100%;
+  height: 700px;
+  background-color: lightgrey;
+}
+.meet-doctors .container .testo{
+  width: 100%;
+  height: 200px;
+  border:1px solid orange;
+}
+.meet-doctors .container .immagini{
+  display: flex;
+  flex-wrap: wrap;
+}
+.meet-doctors .container .immagini img{
+  width: calc(100% / 3);
+  height: 500px;
+  border:1px solid orange;
+}
+/* MAIN/our-services */
+.container-our-services{
+  display: flex;
+  flex-wrap: wrap;
+  margin:0 auto;
+  width: 1170px;
+  border:1px solid black;
+}
+.our-services{
+  width: 100%;
+  height:150px;
+  border:1px solid yellow;
+}
+.rehabilitation, .dental, .medicine, .blood, .pharmaceutical, .medical{
+  width:calc(100% / 3);
+  height:150px;
+  border:1px solid yellow;
+}
+/* MAIN/tour */
+.tour{
+  width: 100%;
+  height: 750px;
+  background-color:grey;
+}
+.tour .testo{
+  width: 100%;
+  height:500px;
+  border:1px solid lightgreen;
+}
+.learn-more{
+  display: flex;
+  flex-wrap: wrap;
+}
+.emergency, .diagnostic, .superb{
+  width: calc(100% / 3);
+  height:250px;
+  border:1px solid lightgreen;
+}
+/* MAIN/make-appointment */
+.make-appointment{
+  width: 100%;
+  height:700px;
+  background-color: lightpink;
+}
+.container-make-appointment{
+  width: 600px;
+  height:500px;
+  border:1px solid brown;
+}
+.make-appointment .container-make-appointment .testo{
+  width: 100%;
+  height: 30%;
+}
+.make-appointment .container-make-appointment .data{
+  width:calc(100% / 2);
+}
+
+/* FOOTER */
+.container-footer{
+  width: 100%;
+  display: flex;
+  flex-wrap:wrap;
+}
+.logo-footer, .contact, .departments{
+  width: calc(100% / 3);
+  height: 200px;
+  border:1px solid blue;
 }

@@ -6,57 +6,117 @@
 body{
   font-family: 'Roboto', sans-serif;
 }
-.container{
-  margin:0 auto;
-  width: 1170px;
-  border:1px solid black;
+.color-lightblue{
+   color:#39afbb;
 }
-/* NAV */
-#nav{
-  display: flex;
-  width: 100%;
-  height:100px;
-  background-color: lightblue;
+.color-white{
+  color:white;
 }
-.nav-left{
-  justify-content:flex-start;
-  width: 20%;
-  height:100px;
-  border:2px solid blue;
+.fixed{
+  width:100%;
+  padding-bottom:0px;
+  position:fixed;
+  top:0;
+  left: 0;
+  z-index:1;
 }
-.nav-right{
-  justify-content:flex-end;
-  width: 80%;
-  height:100px;
-  border:2px solid blue;
-}
+
 /* JUMBOTRON */
 #jumbotron{
   display: flex;
   width: 100%;
-  height: 500px;
-  background-color: lightyellow;
+  height: 600px;
+  background-image: url(../img/header-image-homepage.jpg);
+  background-size: cover;
+}
+.container{
+  width: 100%;
+  display:flex;
+  flex-wrap:wrap;
+}
+header{
+  display:flex;
+  align-content: center;
+  width: 100%;
+  height: 80px;
+}
+.nav-left{
+  display: flex;
+  justify-content: flex-start;
+  width:30%;
+}
+.nav-left img{
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 70%;
+}
+.nav-right{
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  width:70%;
+}
+.nav-right a{
+  margin-top: 30px;
+  color:white;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+.nav-right a:hover{
+  color:#39afbb;
+}
+.nav-right button{
+  margin-top: 25px;
+  margin-right: 40px;
+  color:white;
+  text-transform: uppercase;
+  padding:5px 10px;
+  background-color: #39afbb;
+  height: 30px;
 }
 .caring{
-  justify-content:flex-start;
-  width: 70%;
+  margin-top: 200px;
+  margin-left: 400px;
   height: 200px;
-  border:1px solid lightblue;
+}
+.caring span{
+  font-size: 50px;
+}
+
+.caring button{
+  color:white;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding:5px 10px;
+  background-color: #39afbb;
+  height: 30px;
+}
 }
 /* MAIN/welcome */
-.container-welcome{
+.welcome{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin:0 auto;
   width: 1170px;
   border:1px solid black;
+  background-color: yellow;
 }
-.welcome{
+.container-welcome{
+  display: flex;
+  flex-wrap:wrap;
+  margin:0 auto;
+  width: 1170px;
+}
+.container-welcome .testo{
   width: 100%;
   height:150px;
   border:1px solid red;
 }
 .same, .world, .expert, .complementary{
+  display: flex;
+  flex-wrap: nowrap;
   width:calc(100% / 4);
   height: 150px;
   border:1px solid red;
@@ -65,20 +125,33 @@ body{
 .meet-doctors{
   width: 100%;
   height: 700px;
-  background-color: lightgrey;
+  background-color:#f1efef;
 }
-.meet-doctors .container .testo{
+.container-doctors{
+  display: flex;
+  flex-wrap:wrap;
+  margin:0 auto;
+  width: 1170px;
+  border:1px solid black;
+}
+
+.meet-doctors .container-doctors .testo{
   width: 100%;
   height: 200px;
   border:1px solid orange;
 }
-.meet-doctors .container .immagini{
+.meet-doctors .container-doctors .immagini{
   display: flex;
-  flex-wrap: wrap;
-}
-.meet-doctors .container .immagini img{
+  flex-wrap: nowrap;
   width: calc(100% / 3);
-  height: 500px;
+  height: 400px;
+  border:1px solid orange;
+}
+.meet-doctors .container-doctors .descrizione{
+  display: flex;
+  flex-wrap:nowrap;
+  width: calc(100% / 3);
+  height: 100px;
   border:1px solid orange;
 }
 /* MAIN/our-services */
@@ -88,6 +161,7 @@ body{
   margin:0 auto;
   width: 1170px;
   border:1px solid black;
+  margin-top: 20px;
 }
 .our-services{
   width: 100%;
@@ -103,11 +177,12 @@ body{
 .tour{
   width: 100%;
   height: 750px;
-  background-color:grey;
+  background-image:url(../img/paralax-bg-tour-facilities.jpg);
+  background-size: cover;
+  margin-top: 40px;
 }
-.tour .testo{
-  width: 100%;
-  height:500px;
+.tour .testo-title{
+  height: 300px;
   border:1px solid lightgreen;
 }
 .learn-more{
@@ -116,16 +191,19 @@ body{
 }
 .emergency, .diagnostic, .superb{
   width: calc(100% / 3);
-  height:250px;
   border:1px solid lightgreen;
 }
 /* MAIN/make-appointment */
 .make-appointment{
+  display: flex;
+  justify-content: center;
   width: 100%;
   height:700px;
-  background-color: lightpink;
+  background-image:url(../img/make-an-appointment.jpg);
+  background-size: cover;
 }
 .container-make-appointment{
+
   width: 600px;
   height:500px;
   border:1px solid brown;
@@ -136,6 +214,12 @@ body{
 }
 .make-appointment .container-make-appointment .data{
   width:calc(100% / 2);
+}
+/* MAIN/slider */
+.slider{
+  width: 100%;
+  height: 200px;
+  background-image:url(../img/rgb-gradient-bar-for-logo-carrasel.jpg);
 }
 
 /* FOOTER */

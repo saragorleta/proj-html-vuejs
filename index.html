@@ -26,11 +26,12 @@
             <div class="nav-left">
               <img src="img/medical_logo_2x_light.png" alt="">
             </div>
-            <div class="nav-right">
-              <a href="#">Home</a>
-              <a href="#">About</a>
-              <a href="#">departments</a>
-              <a href="#">Articles</a>
+            <div class="nav-right" v-for="(nav,index) in navBar" @click='aggiungiNav(index)'>
+              <div></div>
+              <a href="#">{{nav.nome}}</a>
+              <a href="#">{{nav.nome}}</a>
+              <a href="#">{{nav.nome}}</a>
+              <a href="#">{{nav.nome}}</a>
               <button>make appointment</button>
             </div>
           </header>
@@ -241,26 +242,32 @@
               <i class="fab fa-youtube-square"></i>
               <i class="fab fa-instagram"></i>
             </div>
-
           </div>
         </div> <!-- / logo-footer -->
+
         <div class="contact">
           <div class="testo">
             <h4>CONTACT INFORMATION</h4>
-            <p><i class="fas fa-map-marker-alt"></i>121 King Street, London United Kingdom</p>
-            <p><i class="fas fa-phone"></i>1.800.458.556</p>
-          </div>
+            <div  v-for="(contact,index)in footerContacts" @click='aggiungiContacts'>
+              <i class="fas fa-map-marker-alt">{{contact.indirizzo}}</i>
+              <i class="fas fa-phone">{{contact.telefono}}</i>
+            </div>
+          </div> <!-- /testo -->
         </div> <!-- / contact -->
+
         <div class="departments">
           <div class="testo">
             <h4>MEDICAL DEPARTMENTS</h4>
-            <ul>
-              <li><i class="far fa-arrow-alt-circle-right"></i>Cardiology</li>
-              <li><i class="far fa-arrow-alt-circle-right"></i>Pediatrics</li>
-              <li><i class="far fa-arrow-alt-circle-right"></i>Diabetes Care</li>
-              <li><i class="far fa-arrow-alt-circle-right"></i>Pre-natal Care</li>
-              <li><i class="far fa-arrow-alt-circle-right"></i>Ultrasound Echocardiogram</li>
-            </ul>
+            <div v-for="(department, index) in footerDepartments" @click='aggiungiDepartments'>
+              <ul>
+                <li><i class="far fa-arrow-alt-circle-right"></i>{{department.Cardiology}}</li>
+                <li><i class="far fa-arrow-alt-circle-right"></i>{{department.Pediatrics}}</li>
+                <li><i class="far fa-arrow-alt-circle-right"></i>{{department.Diabetes-Care}}</li>
+                <li><i class="far fa-arrow-alt-circle-right"></i>{{department.Pre-natal-Care}}</li>
+                <li><i class="far fa-arrow-alt-circle-right"></i>{{department.Ultrasoundechocardiogram}}</li>
+              </ul>
+            </div>
+
             <button>VIEW OUR DEPARTMENTS</button>
           </div>
         </div> <!-- / departments -->

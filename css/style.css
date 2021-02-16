@@ -84,7 +84,6 @@ header{
 .caring span{
   font-size: 50px;
 }
-
 .caring button{
   color:white;
   text-transform: uppercase;
@@ -93,15 +92,12 @@ header{
   background-color: #39afbb;
   height: 30px;
 }
-}
 /* MAIN/welcome */
 .welcome{
   display: flex;
   flex-wrap: nowrap;
   margin:0 auto;
   width: 1170px;
-  border:1px solid black;
-  background-color: yellow;
 }
 .container-welcome{
   display: flex;
@@ -110,16 +106,19 @@ header{
   width: 1170px;
 }
 .container-welcome .testo{
+  text-align: center;
   width: 100%;
-  height:150px;
-  border:1px solid red;
+  margin-top:20px;
+}
+.container-welcome .testo h2{
+  padding-bottom: 20px;
 }
 .same, .world, .expert, .complementary{
   display: flex;
   flex-wrap: nowrap;
   width:calc(100% / 4);
-  height: 150px;
-  border:1px solid red;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 /* MAIN/meet-doctors */
 .meet-doctors{

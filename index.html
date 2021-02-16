@@ -7,7 +7,8 @@
   <!-- link css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- link google font -->
-  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <!-- link fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <!-- cdn vue -->
@@ -28,10 +29,10 @@
             </div>
             <div class="nav-right" v-for="(nav,index) in navBar" @click='aggiungiNav(index)'>
               <div></div>
-              <a href="#">{{nav.nome}}</a>
-              <a href="#">{{nav.nome}}</a>
-              <a href="#">{{nav.nome}}</a>
-              <a href="#">{{nav.nome}}</a>
+              <a href="#">{{navBar.nome}}</a>
+              <a href="#">{{navBar.nome}}</a>
+              <a href="#">{{navBar.nome}}</a>
+              <a href="#">{{navBar.nome}}</a>
               <button>make appointment</button>
             </div>
           </header>
@@ -48,16 +49,37 @@
       <div class="welcome">
         <div class="container-welcome">
           <div class="testo">
+
             <h2>Welcome to Avada Health</h2>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br> doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
           </div>
-          <div class="same">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+          <div class="same">
+            <div class="testo">
+              <img src="img/icon-1.png" alt="">
+              <h4>SAME DAY APPOINTMENTS</h4>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
+            </div>
           </div>
-          <div class="world">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+          <div class="world">
+            <div class="testo">
+              <img src="img/icon-2.png" alt="">
+              <h4>WORLD CLASS FACILITIES</h4>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
+            </div>
           </div>
-          <div class="expert">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+          <div class="expert">
+            <div class="testo">
+              <img src="img/icon-3.png" alt="">
+              <h4>EXPERT DOCTORS</h4>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
+            </div>
           </div>
-          <div class="complementary">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+          <div class="complementary">
+            <div class="testo">
+              <img src="img/icon-4.png" alt="">
+              <h4>COMPLEMENTARY</h4>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
+            </div>
           </div>
 
         </div> <!-- /container-welcome -->
@@ -260,11 +282,8 @@
             <h4>MEDICAL DEPARTMENTS</h4>
             <div v-for="(department, index) in footerDepartments" @click='aggiungiDepartments'>
               <ul>
-                <li><i class="far fa-arrow-alt-circle-right"></i>{{department.Cardiology}}</li>
-                <li><i class="far fa-arrow-alt-circle-right"></i>{{department.Pediatrics}}</li>
-                <li><i class="far fa-arrow-alt-circle-right"></i>{{department.Diabetes-Care}}</li>
-                <li><i class="far fa-arrow-alt-circle-right"></i>{{department.Pre-natal-Care}}</li>
-                <li><i class="far fa-arrow-alt-circle-right"></i>{{department.Ultrasoundechocardiogram}}</li>
+                <li><i class="far fa-arrow-alt-circle-right"></i>{{department}}</li>
+
               </ul>
             </div>
 

@@ -22,9 +22,9 @@ var app = new Vue({
       }
     ],
     footerDepartments:[
-      {
+
         'Cardiology', 'Pediatrics', 'Diabetes-Care','Pre-natel-Care','Ultrasoudechocardiohram'
-      }
+      
     ],
     indexNavSelezionato:0,
     indexContactsSelezionato:0,
@@ -42,7 +42,7 @@ var app = new Vue({
     },
     aggiungiDepartments(index){
       this.indexDepartmentsSelezionato=index;
-    }
+    },
   }
 
 });

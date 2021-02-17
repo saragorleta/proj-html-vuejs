@@ -27,14 +27,17 @@
             <div class="nav-left">
               <img src="img/medical_logo_2x_light.png" alt="">
             </div>
-            <div class="nav-right" v-for="(nav,index) in navBar" @click='aggiungiNav(index)'>
-              <div></div>
-              <a href="#">{{navBar.nome}}</a>
-              <a href="#">{{navBar.nome}}</a>
-              <a href="#">{{navBar.nome}}</a>
-              <a href="#">{{navBar.nome}}</a>
-              <button>make appointment</button>
+            <div class="container-nav-right">
+              <div class="nav-right" v-for="(nav,index) in navBar" @click='aggiungiNav(index)'>
+                <a href="#">{{nav.nome}}</a>
+              </div>
+              <div class="btn-jumbo">
+                <button class="btn">make appointment</button>
+               </div>
             </div>
+
+
+
           </header>
           <div class="caring">
             <span class="color-white">Caring</span> <span class="color-lightblue"> For Life</span>
@@ -49,7 +52,6 @@
       <div class="welcome">
         <div class="container-welcome">
           <div class="testo">
-
             <h2>Welcome to Avada Health</h2>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br> doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</p>
           </div>
@@ -88,10 +90,10 @@
 
       <div class="meet-doctors">
         <div class="container-doctors">
-
           <div class="testo">
             <img src="img/icon-5.png" alt="">
             <h2>MEET OUR DOCTORS</h2>
+            <hr>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
           </div>
 
@@ -106,33 +108,33 @@
           </div>
 
           <div class="descrizione">
-            <p>JON SNOW</p>
-            <p>Anesthesiologist</p>
+            <div class="nome">JON SNOW</div>
+            <div class="professione">Anesthesiologist</div>
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
               <div class="fonts">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-square color-blue"></i>
+                <i class="fab fa-twitter-square color-lightblue"></i>
+                <i class="fab fa-instagram-square color-darkblue"></i>
               </div>
           </div>
           <div class="descrizione">
-            <p>JON SNOW</p>
-            <p>Anesthesiologist</p>
+            <div class="nome">TYRION LANNISTER</div>
+            <div class="professione">Cardiologist</div>
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
               <div class="fonts">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-square color-blue"></i>
+                <i class="fab fa-twitter-square color-lightblue"></i>
+                <i class="fab fa-instagram-square color-darkblue"></i>
               </div>
           </div>
           <div class="descrizione">
-            <p>JON SNOW</p>
-            <p>Anesthesiologist</p>
+            <div class="nome">ARIA STARK</div>
+            <div class="professione">Nurse pratictionair</div>
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
             <div class="fonts">
-              <i class="fab fa-facebook-square"></i>
-              <i class="fab fa-twitter-square"></i>
-              <i class="fab fa-instagram"></i>
+              <i class="fab fa-facebook-square color-blue"></i>
+              <i class="fab fa-twitter-square color-lightblue"></i>
+              <i class="fab fa-instagram-square color-darkblue"></i>
             </div>
           </div>
 
@@ -141,12 +143,14 @@
 
       <div class="container-our-services">
         <div class="our-services">
-          <div class="testo">
+          <div class="testo-our-services">
             <img src="img/icon-6.png" alt="">
             <h2>OUR HEALTH SERVICES</h2>
+            <hr>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
           </div>
         </div>
+        <div class="container-immagini">
           <div class="rehabilitation">
             <div class="testo">
               <img src="img/icon-14.png" alt="">
@@ -189,38 +193,42 @@
               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
             </div>
           </div>
+        </div>
+
       </div> <!-- / container-our-service-->
 
       <div class="tour">
-        <div class="testo">
+        <div class="testo-tour">
           <img src="img/icon-7.png" alt="">
           <h2>TOUR OUR FACILITIES</h2>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
-          <img src="img/play-icon.png" alt="">
-        </div> <!-- /testo -->
+          <hr>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br> doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo <br> inventore veritatis et quasi architecto beatae</p>
+          <img class="pb"src="img/play-icon.png" alt="">
+        </div> <!-- /testo-tour-->
+
         <div class="learn-more">
-          <div class="emergency">
+          <div class="emergency bg-green">
             <div class="testo">
               <h4>Emergency Care</h4>
               <img src="" alt="">
               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
-              <button>LEARN MORE</button>
+              <button class="bg-green">LEARN MORE</button>
             </div>
           </div>
-          <div class="diagnostic">
+          <div class="diagnostic bg-lightblue">
             <div class="testo">
               <h4>Expert Diagnostic</h4>
               <img src="" alt="">
               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
-              <button>LEARN MORE</button>
+              <button class="bg-lightblue">LEARN MORE</button>
             </div>
           </div>
-          <div class="superb">
+          <div class="superb bg-blue">
             <div class="testo">
               <h4>Superb Rehabilitation</h4>
               <img src="" alt="">
               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
-              <button>LEARN MORE</button>
+              <button class="bg-blue">LEARN MORE</button>
             </div>
           </div>
         </div> <!-- /learn-more -->
@@ -230,18 +238,31 @@
         <div class="container-make-appointment">
           <div class="testo">
             <h2>Make An Appointment</h2>
+            <hr>
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
           </div> <!-- /testo -->
-          <div class="data">
+          <div class="data-name">
             <input type="text" placeholder="Name*">
             <input type="text"placeholder="Email*">
-            <input type="text"placeholder="Phone Number*">
-            <input type="text"placeholder="Appointment data*">
+          </div>
+          <div class="pippo">
+            <div class="data-phone">
+              <input type="text"placeholder="Phone Number*">
+            </div>
+            <div class="data-appointment">
+              <i class="far fa-calendar-alt"></i>
+              <input type="text"placeholder="Appointment data*">
+            </div>
+          </div>
+
+          <div class="data-help">
             <input type="text" placeholder="How can we help?*">
+          </div>
+
             <div class="btn-appointment">
               <button>make an appointment</button>
             </div> <!-- btn-appointment-->
-          </div> <!-- /data -->
+
         </div> <!-- /container-make-appointment-->
       </div> <!-- / make-appointment -->
 
@@ -254,15 +275,15 @@
       <div class="container-footer">
 
         <div class="logo-footer">
-          <div class="testo">
+          <div class="testo-footer">
             <img src="img/medical_logo_1x_dark.png" alt="">
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
             <p>LEARN MORE ABOUT US</p>
-            <div class="fonts">
-              <i class="fab fa-facebook-square"></i>
-              <i class="fab fa-twitter-square"></i>
-              <i class="fab fa-youtube-square"></i>
-              <i class="fab fa-instagram"></i>
+            <div class="fonts-footer">
+              <i class="fab fa-facebook-square color-blue"></i>
+              <i class="fab fa-twitter-square color-lightblue"></i>
+              <i class="fab fa-youtube-square color-red"></i>
+              <i class="fab fa-instagram-square color-darkblue"></i>
             </div>
           </div>
         </div> <!-- / logo-footer -->
@@ -270,27 +291,41 @@
         <div class="contact">
           <div class="testo">
             <h4>CONTACT INFORMATION</h4>
-            <div  v-for="(contact,index)in footerContacts" @click='aggiungiContacts'>
-              <i class="fas fa-map-marker-alt">{{contact.indirizzo}}</i>
-              <i class="fas fa-phone">{{contact.telefono}}</i>
+            <hr>
+            <div class="container-contact">
+            <div class="fonts-contact">
+              <ul>
+                <li><i class="fas fa-map-marker-alt"></i></li>
+                <li><i class="fas fa-phone"></i></li>
+              </ul>
             </div>
-          </div> <!-- /testo -->
-        </div> <!-- / contact -->
+            <div class="testo.contacts">
+              <ul>
+                <li>{{footerContacts.indirizzo}}</li>
+                <li>{{footerContacts.telefono}}</li>
+              </ul>
+            </div>
+          </div>    <!-- /container contacts -->
+        </div> <!-- /testo -->
+      </div> <!-- / contact -->
 
         <div class="departments">
           <div class="testo">
             <h4>MEDICAL DEPARTMENTS</h4>
+            <hr>
             <div v-for="(department, index) in footerDepartments" @click='aggiungiDepartments'>
               <ul>
-                <li><i class="far fa-arrow-alt-circle-right"></i>{{department}}</li>
-
+                <li>
+                  <i class="far fa-arrow-alt-circle-right"></i>{{department}}
+                </li>
               </ul>
             </div>
-
             <button>VIEW OUR DEPARTMENTS</button>
-          </div>
+          </div> <!-- testo -->
         </div> <!-- / departments -->
-
+        <div class="copiright">
+          <small>© Copyright 2012 - 2021   |   Avada Theme by Theme Fusion   |   All Rights Reserved   |   Powered by WordPress</small>
+        </div>
       </div><!-- /container-footer -->
     </footer>
 

@@ -15,16 +15,16 @@ var app = new Vue({
         nome:'Articles'
       },
     ],
-    footerContacts:[
+    footerContacts:
       {
         indirizzo:'121 King Street, London United Kingdom',
         telefono:'1.800.458.556'
       }
-    ],
+    ,
     footerDepartments:[
 
-        'Cardiology', 'Pediatrics', 'Diabetes-Care','Pre-natel-Care','Ultrasoudechocardiohram'
-      
+      'Cardiology', 'Pediatrics', 'Diabetes-Care','Pre-natel-Care','Ultrasoudechocardiohram'
+
     ],
     indexNavSelezionato:0,
     indexContactsSelezionato:0,

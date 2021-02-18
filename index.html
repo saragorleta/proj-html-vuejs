@@ -23,7 +23,7 @@
       <div id="jumbotron">
         <!-- header -->
         <div class="container">
-          <header class="fixed">
+          <header :class="{ 'onScroll': !view.topOfPage}">
             <div class="nav-left">
               <img src="img/medical_logo_2x_light.png" alt="">
             </div>
@@ -35,9 +35,6 @@
                 <button class="btn">make appointment</button>
                </div>
             </div>
-
-
-
           </header>
           <div class="caring">
             <span class="color-white">Caring</span> <span class="color-lightblue"> For Life</span>

@@ -1,6 +1,13 @@
 var app = new Vue({
   el:'#app',
   data:{
+
+    view:{
+
+    topOfPage:true
+
+    },
+
     navBar:[
       {
         nome:'Home'
@@ -31,8 +38,20 @@ var app = new Vue({
     indexDepartmentsSelezionato:0
 
   },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
 
-  methods:{
+  methods: {
+  handleScroll(){
+    if(window.pageYOffset>0){
+      if(this.view.topOfPage) this.view.topOfPage = false
+    } else {
+      if(!this.view.topOfPage) this.view.topOfPage = true
+    }
+  }
+},
+
     aggiungiNav(index){
       this.indexNavSelezionato=index;
       console.log(index);
@@ -43,6 +62,5 @@ var app = new Vue({
     aggiungiDepartments(index){
       this.indexDepartmentsSelezionato=index;
     },
-  }
 
 });
